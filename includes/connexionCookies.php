@@ -1,20 +1,27 @@
 <?php
 
-	include("includes/haut.php");
-	include("includes/connexion.php");
+	include("includes/haut.inc.php");
+	include("includes/connexion.inc.php"); 
 ?>
 
 
 <?php
  if(isset($_POST['email'])){
- 	//echo 'Bienvenue' . $_COOKIE['email'] . ' !';    
-   // $sid=mdS($_POST['email'].time());    	
 
+ 	$sql="SELECT * FROM utilisateurs WHERE email=:email AND mdp=:mdp";
 
+ 	$sid=$pdo->prepare($sql);
+	$sid->bindValue(':email', $_POST['email']);
+	$sid->bindValue(':mdp', $_POST['mdp']);
+	$sid->execute();
+
+	$sid=mdS($_POST['email'].time());
+
+ 	$sql="UPDATE utilisateur SET sid=:sid WHERE email=:email";
 
    }
   else
-  {?>
+  { ?>
 
 		 <!-- About Section -->
 		</br> </br></br></br></br>
@@ -34,7 +41,9 @@
 		                            echo "<input type='password' name='mdp' class='form-control' placeholder='mot de passe'>
 		                           </textarea>";
 		                            
+		                            echo "<input type='checkbox'>  Se souvenir de moi</input>"
 		                            ?>
+
 		                            
 		                        </div>
 		                    </div>
@@ -48,5 +57,5 @@
 
 
 <?php
-include("includes/bas.php");
+include("includes/bas.inc.php");
 ?>

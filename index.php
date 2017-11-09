@@ -1,6 +1,6 @@
 <?php 
-include('includes/haut.php');
-include('includes/connexion.php');
+include('includes/haut.inc.php');
+include('includes/connexion.inc.php');
 ?>
     
 
@@ -79,10 +79,6 @@ include('includes/connexion.php');
            
 ?>
             
-            
-            
-            
-            
             <div class="row">
                 <div class="col-md-12">
                     <blockquote>
@@ -105,5 +101,5 @@ include('includes/connexion.php');
     </section>
     
     <?php
-     include('includes/bas.php');
+     include('includes/bas.inc.php');
 ?>

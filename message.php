@@ -1,5 +1,5 @@
 <?php
-include('includes/connexion.php');
+include('includes/connexion.inc.php');
 
 $sql=" INSERT INTO messages (contenu,date) VALUES (:contenu,UNIX_TIMESTAMP())";
 $prep=$pdo->prepare($sql);

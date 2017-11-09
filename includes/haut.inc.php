@@ -16,7 +16,7 @@
     <!-- Theme CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
 
-    <!-- Custom Fonts (bibliothèque d'icone) -->
+    <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -50,7 +50,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#">Connexion</a>
+                        <a href="connect.php" >Connexion</a>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

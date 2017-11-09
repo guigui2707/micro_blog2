@@ -1,5 +1,5 @@
 <?php
-include('includes/connexion.php');
+include('includes/connexion.inc.php');
 
 $a= $_GET['a'];
 
