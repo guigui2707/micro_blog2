@@ -1,5 +1,5 @@
 <?php 
-include('includes/haut.inc.php');
+include('includes/haut.tpl');
 include('includes/connexion.inc.php');
 ?>
     
@@ -101,5 +101,5 @@ include('includes/connexion.inc.php');
     </section>
     
     <?php
-     include('includes/bas.inc.php');
+     include('includes/bas.tpl');
 ?>

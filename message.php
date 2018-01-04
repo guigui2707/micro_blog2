@@ -12,8 +12,6 @@ if($nom!=""){
 
 if (isset($_POST['message']) && !empty($_POST['message'])) {
    
-    
-    
 	//Si l'id n'existe pas ou si l'id est vide, on fait une requete INSERT , sinon on fait un update (si l'utilisateur a appuyé sur le bouton modifier)
 	if(!isset($_POST['id']) || empty($_POST['id'])){
 		$query = 'INSERT INTO messages (contenu, date, id_utilisateurs) VALUES (:contenu, UNIX_TIMESTAMP(),:id_utilisateurs)';
@@ -44,6 +42,6 @@ else{
 		
 	</div>
 	<?php
-	include('includes/bas.inc.php');
+	include('includes/bas.tpl');
 }
 ?>
