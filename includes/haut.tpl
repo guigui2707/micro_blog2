@@ -44,26 +44,28 @@
                             <a href="#page-top"></a>
                         </li>
 
-                        <li class="page-scroll">                            
+                        <li>                            
                             {if $nom == ""}
-                            <!-- Bouton connexion si non connecté-->
-                            <a id="connexion" href="connexion.php">Connexion</a>
-                        
+                          
+                                <!-- Bouton connexion si non connecté-->
+                                <li>
+                                    <a id="connexion" href="connexion.php">Mon compte</a>
+                                </li>
+
                             {else}
-                            <!-- Bouton déconnexion si connecté-->
-                            <a id="deconnexion" href="deconnexion.php">Deconnexion </a> 
-                            <p style="font-size: 13px; color:white"> Bienvenue {$nom} !</p>
+                                <!-- Bouton déconnexion si connecté-->
+                                <a id="deconnexion" href="deconnexion.php">Me deconnecter </a> 
                             {/if}
                         </li>
-
+                        <li><div class="col-sm-1"></div></li>
                         <li>
                             <!-- Formulaire de recherche -->
-                            <form action="index.php" method="get" style="display:flex;margin-top:7px;margin-left: 20px;">
-                                <input type="text"  placeholder="Rechercher" name="search" class="form-control">
-                                <button class="btn glyphicon glyphicon-search" type="submit"></button>
+                            <form style="margin-top: 3%" action="rechercher.php" method="get">
+                                <input type="text" placeholder="Rechercher" name="search" class="form-control">
                             </form>
-                        </li>
+                        </li>                        
                     </ul>
+
                 </div>          
             </div>
         </nav>
