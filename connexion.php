@@ -19,7 +19,7 @@ $resultat=$prep->fetch(); //resultat
 //Si retour d'un resultat on authentifie l'utilisateur
 if($resultat){
     //création du sid et du cookie de session 
-    $sid=md5($_POST['email'].$_POST['mdp'].time());
+    $sid=md5($_POST['email'].time());
     setcookie("cookieUtilisateur", $sid, time()+300);
     //On mets le sid dans la base de données 
     $sql = 'UPDATE utilisateurs SET sid=:sid WHERE email=:email AND mdp=:mdp';

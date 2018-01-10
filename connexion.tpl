@@ -1,21 +1,75 @@
 {include file='includes/haut.tpl'}
-	
-	<h1>Espace connexion </h1>
+    
+    
+    <!-- Formulaire de connexion -->
+    <div class="row">
+        <div class="col-sm-3""></div>
+        <div style="text-align: center;background-color: #DCDCDC; padding-left: 50px;padding-right: 50px" class="col-sm-6">
 
-	<!-- Formulaire de connexion -->
-	<form action="connexion.php" method="post">
+            <h1>Espace connexion </h1>
+            <form action="connexion.php" method="post">
 
-		<!-- email -->
-        <p id="mail">Email</p>
-        <input type="email" id="email" class="form-control" name="email" placeholder="Email">
-        
-        <!-- Mot de passe -->       
-        <p id="password">Mot de passe</p>
-        <input type="password" id="mdp" class="form-control" name="mdp" placeholder="Mot de passe">
-        
-                          
-        <!-- Bouton -->
-        <button class="btn btn-success" type="submit">Connexion</button>
-    </form>
+                <!-- email -->
+                <p id="mail">Email</p>
+                <input type="email" id="email" class="form-control" name="email" placeholder="Email">
+                </br>
 
+                <!-- Mot de passe -->       
+                <p id="password">Mot de passe</p>
+                <input type="password" id="mdp" class="form-control" name="mdp" placeholder="Mot de passe">
+                </br>   
+
+                <!-- Bouton -->
+                <button class="btn btn-success" type="submit">Connexion</button>
+            </form>
+
+        </div>
+    </div>
+
+</br></br>
+    <!-- Formulaire d'inscription -->
+    <div class="row">
+        <div class="col-sm-3""></div>
+        <div style="text-align: center;background-color: #DCDCDC; padding-left: 50px;padding-right: 50px" class="col-sm-6">
+
+            <h1>Créer un compte </h1>
+            <form action="inscription.php" method="post">
+                <!-- nom -->
+                <p id="nom">Nom</p>
+                <input type="name" id="nom" class="form-control" name="nomI" placeholder="Nom">
+
+                <!-- email -->
+                <p id="mail">Email</p>
+                <input type="email" id="email" class="form-control" name="emailI" placeholder="Email">
+                </br>
+                <!-- Mot de passe -->       
+                <p id="password">Mot de passe</p>
+                <input type="password" id="mdp" class="form-control" name="mdpI" placeholder="Mot de passe">
+                </br>                              
+                <!-- Bouton -->
+                <button class="btn btn-success" type="submit"> Inscription </button>
+            </form>
+        </div>
+    </div>
+
+    {if isset($erreur)}
+    {if $erreur} 
+        <script type="text/javascript"> 
+            alert("Nom ou email déjà utilisé ! Veuillez réessayer") 
+        </script>
+    {else}
+        <script type="text/javascript"> 
+            alert("Compte crée avec succès ! Vous pouvez vous connecter") 
+        </script>
+    {/if}
+    {/if}
+
+    {if isset($vide)}
+    {if $vide} 
+        <script type="text/javascript"> 
+            alert("Un champ n'est pas rempli") 
+        </script>
+    {/if}
+    {/if}
+    
 {include file='includes/bas.tpl'}
