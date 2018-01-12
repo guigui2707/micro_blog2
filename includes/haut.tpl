@@ -60,8 +60,8 @@
                         <li><div class="col-sm-1"></div></li>
                         <li>
                             <!-- Formulaire de recherche -->
-                            <form style="margin-top: 3%" action="rechercher.php" method="get">
-                                <input type="text" placeholder="Rechercher" name="search" class="form-control">
+                            <form style="margin-top: 3%" action="recherche.php" method="get">
+                                <input type="text" placeholder="Rechercher" name="search" class="form-control" id="schbox">                                                                
                             </form>
                         </li>                        
                     </ul>
