@@ -21,12 +21,14 @@
 
                 <!-- Bouton -->
                 <button class="btn btn-success" type="submit">Connexion</button>
+
             </form>
 
         </div>
     </div>
 
 </br></br>
+
     <!-- Formulaire d'inscription -->
     <div class="row">
         <div class="col-sm-3""></div>
@@ -52,6 +54,7 @@
         </div>
     </div>
 
+    <!-- AFFICHAGE DES ERREURS DE SAISIE-->
     {if isset($erreur)}
     {if $erreur} 
         <script type="text/javascript"> 

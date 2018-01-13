@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-01-13 19:09:46
+  from "C:\wamp64\www\micro_blog\includes\haut.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a5a597a25a353_07942438',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '162b9af5ec5dbf62ff139a58c2e1db9becc200f2' => 
+    array (
+      0 => 'C:\\wamp64\\www\\micro_blog\\includes\\haut.tpl',
+      1 => 1515870229,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5a5a597a25a353_07942438 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,7 +39,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Theme CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
+    <?php echo '<script'; ?>
+ type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"><?php echo '</script'; ?>
+> 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -45,15 +71,15 @@
                         </li>
 
                         <li>                            
-                            {if $nom == ""}                          
+                            <?php if ($_smarty_tpl->tpl_vars['nom']->value == '') {?>                          
                                 <!-- Bouton connexion si non connecté-->
                                 <li>
                                     <a id="connexion" href="connexion.php">Mon compte</a>
                                 </li>
-                            {else}
+                            <?php } else { ?>
                                 <!-- Bouton déconnexion si connecté-->
                                 <a id="deconnexion" href="deconnexion.php">Me deconnecter </a> 
-                            {/if}
+                            <?php }?>
                         </li>
                         <li><div class="col-sm-1"></div></li>
                         <li>
@@ -85,4 +111,5 @@
 <section>
     <div class="container">
 
-       
+       <?php }
+}

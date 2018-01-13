@@ -1,21 +1,23 @@
 <?php
-	include('includes/connexion.inc.php');
+include('includes/connexion.inc.php');
 
-	/*RECUPERATION DE L'ID DE L'UTILISATEUR*/
-	$sql='SELECT idUtilisateurs FROM utilisateurs WHERE nom="'.$nom.'"';
+
+	//requete pour rechercher l'id de l'utilisateur
+	$sql="SELECT idUtilisateurs FROM utilisateurs WHERE nom='$nom'";
 	$stmt = $pdo->query($sql);
-	while ($data=$stmt->fetch())
-		$UserConnecte=$data['idUtilisateurs'];
+	while ($data = $stmt->fetch()) 
+		$idUser=$data['idUtilisateurs'];
 	
-	/*REQUETE D'INSERTION DU MESSAGE*/
-	$sql='INSERT INTO messages (contenu,date,idUtilisateurs) VALUES (:contenu, UNIX_TIMESTAMP(),:UserConnecte)';
-	$prep = $pdo->prepare($sql);
-	$prep->bindValue(':contenu', $_POST['message']);
-	$prep->bindValue(':UserConnecte', $UserConnecte);
-	$prep->execute();
-    
-	header('Location:index.php');
-	exit();
+	//requete insertion message
+	if (isset($_POST['message'])) 
+	{       	
+		$sql ="INSERT INTO messages (contenu, date, idUtilisateurs) VALUES ('{$_POST['message']}', UNIX_TIMESTAMP(),{$idUser})";
+		$prep = $pdo->prepare($sql);	
+		$prep->execute();
+	    
+	}
 
+	//on redirige l'utilisateur sur la page index.php
+	header('Location:index.php');
 
 ?>

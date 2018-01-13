@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-01-13 19:09:46
+  from "C:\wamp64\www\micro_blog\includes\bas.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a5a597a297253_22460636',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8980c287529731bf00aec5204d8a601b33119b02' => 
+    array (
+      0 => 'C:\\wamp64\\www\\micro_blog\\includes\\bas.tpl',
+      1 => 1515870200,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5a5a597a297253_22460636 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 
 </div>
 </section>
@@ -41,13 +65,23 @@
     </div>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <?php echo '<script'; ?>
+ src="vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <?php echo '<script'; ?>
+ src="vendor/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 
     <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
     <!-- Theme JavaScript -->
-    <script src="js/freelancer.min.js"></script>
+    <?php echo '<script'; ?>
+ src="js/freelancer.min.js"><?php echo '</script'; ?>
+>
+<?php }
+}

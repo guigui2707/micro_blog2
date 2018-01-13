@@ -3,8 +3,9 @@
     require('libs/Smarty.class.php');//on inclut la classe smarty
     $smarty = new Smarty();
 
+    
     //Requete SQL pour recuperer les infos du message
-    $sql ='SELECT contenu, id, nom, date FROM messages NATURAL JOIN utilisateurs ORDER BY date DESC';
+    $sql ='SELECT contenu, id, nom, date FROM messages NATURAL JOIN utilisateurs ORDER BY date DESC LIMIT 5';
     $stmt=$pdo->query($sql);
 
      /*AFFICHAGE DES MESSAGES*/
@@ -22,8 +23,6 @@
 
     $smarty->assign('tableau',$tableau);
     $smarty->assign('nom',$nom);
-
     $smarty->display('index.tpl'); //code html
 ?>
-
 

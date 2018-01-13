@@ -1,20 +1,17 @@
 <?php
-/*CONNEXION A LA BASE DE DONNEES*/
-$pdo= new PDO('mysql:host=localhost;dbname=micro_blog','root','');
+	/*CONNEXION A LA BASE DE DONNEES*/
+	$pdo= new PDO('mysql:host=localhost;dbname=micro_blog','root','');
 
-//On crée le sid de l'utilisateur en fonction de son cookie 
-if(isset($_COOKIE['cookieUtilisateur']))
-{
-	$query='SELECT * FROM utilisateurs WHERE sid=:sid';
-	$prep= $pdo->prepare($query);
-	$prep->bindValue(':sid', $_COOKIE['cookieUtilisateur']);
-	$prep->execute();
-	
-	while ($data = $prep->fetch()) 
-		$nom=$data['nom'];	
-}
-else
-	$nom="";
-
+	//On crée le sid de l'utilisateur en fonction de son cookie 
+	if(isset($_COOKIE['cookieUtilisateur']))
+	{
+		$sql="SELECT * FROM utilisateurs WHERE sid='{$_COOKIE['cookieUtilisateur']}'";
+		$stmt= $pdo->query($sql);	
+			
+		while ($data=$stmt->fetch()) 
+			$nom=$data['nom'];	
+	}
+	else
+		$nom="";
 
 ?>
