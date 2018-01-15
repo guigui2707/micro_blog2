@@ -11,7 +11,7 @@ include('includes/connexion.inc.php');
 	//requete insertion message
 	if (isset($_POST['message'])) 
 	{       	
-		$sql ="INSERT INTO messages (contenu, date, idUtilisateurs) VALUES ('{$_POST['message']}', UNIX_TIMESTAMP(),{$idUser})";
+		$sql ="INSERT INTO messages (contenu, date, idUtilisateurs) VALUES ('".sql($_POST['message'])."', UNIX_TIMESTAMP(),{$idUser})";
 		$prep = $pdo->prepare($sql);	
 		$prep->execute();
 	    
@@ -20,4 +20,10 @@ include('includes/connexion.inc.php');
 	//on redirige l'utilisateur sur la page index.php
 	header('Location:index.php');
 
+
+	//fonction pour que les apostrophes soit pris en compte
+   	function sql($string)
+	{
+		return str_replace('\'', '\'\'', $string);
+	}
 ?>

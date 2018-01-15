@@ -7,9 +7,9 @@
 	/*METHODE RECHERCHE */
 
 	//requete recherche
-   	$sql = 'SELECT contenu, id, nom, date FROM messages NATURAL JOIN utilisateurs WHERE contenu LIKE "%'.$_GET['search'].'%" OR nom LIKE "%'.$_GET['search'].'%" ';
+   	$sql = 'SELECT contenu, id, nom, date FROM messages NATURAL JOIN utilisateurs WHERE contenu LIKE "%'.$_GET['search'].'%" ORDER BY date DESC';
    	//requete comptabilisation du nb de resultat
-   	$nb='SELECT count(id) AS nbResultat FROM messages NATURAL JOIN utilisateurs WHERE contenu LIKE "%'.$_GET['search'].'%" OR nom LIKE "%'.$_GET['search'].'%" ORDER BY date DESC';
+   	$nb='SELECT count(id) AS nbResultat FROM messages NATURAL JOIN utilisateurs WHERE contenu LIKE "%'.$_GET['search'].'%" ';
 	
 	$stmt=$pdo->query($sql);
 	$count=$pdo->query($nb);

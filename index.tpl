@@ -20,7 +20,6 @@
 {/if}
 
 
-
 <!-- Affichage du contenu des messages par un tableau -->
 {foreach from=$tableau item=donnees}
       <!-- Contenu et affichage du message -->
@@ -36,6 +35,37 @@
       </blockquote>
 
 {/foreach}
+
+
+<!-- PAGINATION DES MESSAGES -->
+<div class="col-sm-5">  
+    <div style="font-size: 18px" class="pagination">
+
+      <!-- Affichage du bouton précédent -->
+      {if $smarty.get.page != 1}
+        <li>
+          <a href="index.php?page={$smarty.get.page-1}">Précedent</a>
+        </li>
+      {/if}
+
+      <!-- Affichage des numéros de page -->
+      {for $cpt=1 to $nbPages}
+        <li>
+            <a href="index.php?page={$cpt}">{$cpt}</a>
+        </li>
+      {/for}
+      
+
+      <!-- Affichage du bouton suivant -->
+      {if $smarty.get.page < $nbPages}        
+          <li>            
+            <a href="index.php?page={$smarty.get.page+1}"> Suivant </a>
+          </li>        
+      {/if}     
+
+    </div>    
+</div>
+
 
 
 {include file='includes/bas.tpl'}

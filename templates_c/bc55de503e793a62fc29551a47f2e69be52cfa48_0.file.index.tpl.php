@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-13 19:09:46
+/* Smarty version 3.1.30, created on 2018-01-15 10:45:25
   from "C:\wamp64\www\micro_blog\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5a597a21d452_66004371',
+  'unifunc' => 'content_5a5c8645c31c49_79375340',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bc55de503e793a62fc29551a47f2e69be52cfa48' => 
     array (
       0 => 'C:\\wamp64\\www\\micro_blog\\index.tpl',
-      1 => 1515870316,
+      1 => 1516012542,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5a5a597a21d452_66004371 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5c8645c31c49_79375340 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -45,7 +45,6 @@ $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_i
     </form>
   </div>
 <?php }?>
-
 
 
 <!-- Affichage du contenu des messages par un tableau -->
@@ -76,6 +75,48 @@ foreach ($_from as $_smarty_tpl->tpl_vars['donnees']->value) {
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
+
+
+
+<!-- PAGINATION DES MESSAGES -->
+<div class="col-sm-5">  
+    <div style="font-size: 18px" class="pagination">
+
+      <!-- Affichage du bouton précédent -->
+      <?php if ($_GET['page'] != 1) {?>
+        <li>
+          <a href="index.php?page=<?php echo $_GET['page']-1;?>
+">Précedent</a>
+        </li>
+      <?php }?>
+
+      <!-- Affichage des numéros de page -->
+      <?php
+$_smarty_tpl->tpl_vars['cpt'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['cpt']->step = 1;$_smarty_tpl->tpl_vars['cpt']->total = (int) ceil(($_smarty_tpl->tpl_vars['cpt']->step > 0 ? $_smarty_tpl->tpl_vars['nbPages']->value+1 - (1) : 1-($_smarty_tpl->tpl_vars['nbPages']->value)+1)/abs($_smarty_tpl->tpl_vars['cpt']->step));
+if ($_smarty_tpl->tpl_vars['cpt']->total > 0) {
+for ($_smarty_tpl->tpl_vars['cpt']->value = 1, $_smarty_tpl->tpl_vars['cpt']->iteration = 1;$_smarty_tpl->tpl_vars['cpt']->iteration <= $_smarty_tpl->tpl_vars['cpt']->total;$_smarty_tpl->tpl_vars['cpt']->value += $_smarty_tpl->tpl_vars['cpt']->step, $_smarty_tpl->tpl_vars['cpt']->iteration++) {
+$_smarty_tpl->tpl_vars['cpt']->first = $_smarty_tpl->tpl_vars['cpt']->iteration == 1;$_smarty_tpl->tpl_vars['cpt']->last = $_smarty_tpl->tpl_vars['cpt']->iteration == $_smarty_tpl->tpl_vars['cpt']->total;?>
+        <li>
+            <a href="index.php?page=<?php echo $_smarty_tpl->tpl_vars['cpt']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['cpt']->value;?>
+</a>
+        </li>
+      <?php }
+}
+?>
+
+      
+
+      <!-- Affichage du bouton suivant -->
+      <?php if ($_GET['page'] < $_smarty_tpl->tpl_vars['nbPages']->value) {?>        
+          <li>            
+            <a href="index.php?page=<?php echo $_GET['page']+1;?>
+"> Suivant </a>
+          </li>        
+      <?php }?>     
+
+    </div>    
+</div>
 
 
 
