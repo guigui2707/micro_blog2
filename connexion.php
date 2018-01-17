@@ -1,19 +1,20 @@
-<?php
-    ini_set("display_errors",0); error_reporting(0);
+<?php   
     include('includes/connexion.inc.php');
     require('libs/Smarty.class.php');
     $smarty = new Smarty();
     $smarty->assign('nom', $nom);
 
     //requete pour chercher l'utilisateur dans la base de données
-    $sql = "SELECT nom FROM utilisateurs WHERE email='{$_POST['email']}' AND mdp=:mdp";
-    $prep = $pdo->prepare($sql);    
-    $prep->bindValue(':mdp', md5($_POST['mdp']));
-    $prep->execute();
-    $resultat=$prep->fetch(); //resultat
-
+    if(isset($_POST['mdp'])&& isset($_POST['email']))
+    {
+        $sql = "SELECT nom FROM utilisateurs WHERE email='{$_POST['email']}' AND mdp=:mdp";
+        $prep = $pdo->prepare($sql);    
+        $prep->bindValue(':mdp', md5($_POST['mdp']));
+        $prep->execute();
+        $resultat=$prep->fetch(); //resultat
+    }
     //Si retour d'un resultat on authentifie l'utilisateur
-    if($resultat)
+    if(isset($resultat))
     {
         //création du sid et du cookie de session 
         $sid=md5($_POST['email'].time());
