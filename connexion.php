@@ -5,7 +5,7 @@
     $smarty->assign('nom', $nom);
 
     //requete pour chercher l'utilisateur dans la base de données
-    if(isset($_POST['mdp'])&& isset($_POST['email']))
+    if(isset($_POST['mdp'])&& isset($_POST['email']) && $_POST['mdp'] !="" && $_POST['email']!="")
     {
         $sql = "SELECT nom FROM utilisateurs WHERE email='{$_POST['email']}' AND mdp=:mdp";
         $prep = $pdo->prepare($sql);    
