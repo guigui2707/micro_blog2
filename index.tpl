@@ -7,7 +7,7 @@
     <form method="post" action="message.php">
       <div class="col-sm-10">  
         <div class="form-group">
-          <textarea id="message" method="get" name="message" class="form-control" placeholder="Message"></textarea>         
+          <textarea id="message" method="get" name="message" class="form-control" placeholder="{$nom}, postez votre message ici"></textarea>         
         </div>
       </div>
 

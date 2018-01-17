@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-13 19:09:46
+/* Smarty version 3.1.30, created on 2018-01-17 09:52:23
   from "C:\wamp64\www\micro_blog\includes\haut.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5a597a25a353_07942438',
+  'unifunc' => 'content_5a5f1cd7e427a7_71606960',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '162b9af5ec5dbf62ff139a58c2e1db9becc200f2' => 
     array (
       0 => 'C:\\wamp64\\www\\micro_blog\\includes\\haut.tpl',
-      1 => 1515870229,
+      1 => 1516182738,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5a597a25a353_07942438 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5f1cd7e427a7_71606960 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-15 10:45:25
+/* Smarty version 3.1.30, created on 2018-01-17 09:49:10
   from "C:\wamp64\www\micro_blog\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5c8645c31c49_79375340',
+  'unifunc' => 'content_5a5f1c16e65df8_00938081',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bc55de503e793a62fc29551a47f2e69be52cfa48' => 
     array (
       0 => 'C:\\wamp64\\www\\micro_blog\\index.tpl',
-      1 => 1516012542,
+      1 => 1516182452,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5a5c8645c31c49_79375340 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5f1c16e65df8_00938081 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -34,7 +34,8 @@ $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_i
     <form method="post" action="message.php">
       <div class="col-sm-10">  
         <div class="form-group">
-          <textarea id="message" method="get" name="message" class="form-control" placeholder="Message"></textarea>         
+          <textarea id="message" method="get" name="message" class="form-control" placeholder="<?php echo $_smarty_tpl->tpl_vars['nom']->value;?>
+, postez votre message ici"></textarea>         
         </div>
       </div>
 
