@@ -1,5 +1,8 @@
 UTILISATION DU SITE MICRO_BLOG
 
+
+J'ai réalisé toutes les fonctionnalités demandés.
+
 =========BASE DE DONNEES ===============
 
 Nom: micro_blog
