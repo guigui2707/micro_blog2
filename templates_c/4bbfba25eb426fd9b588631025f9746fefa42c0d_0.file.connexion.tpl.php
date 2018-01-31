@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-31 15:28:03
+/* Smarty version 3.1.30, created on 2018-01-31 16:46:37
   from "C:\wamp64\www\micro_blog\connexion.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a71e08302af59_07807171',
+  'unifunc' => 'content_5a71f2edab0f55_10313925',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4bbfba25eb426fd9b588631025f9746fefa42c0d' => 
     array (
       0 => 'C:\\wamp64\\www\\micro_blog\\connexion.tpl',
-      1 => 1517412479,
+      1 => 1517417196,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5a71e08302af59_07807171 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a71f2edab0f55_10313925 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -90,11 +90,16 @@ $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_i
 >
 <?php echo '<script'; ?>
  type="text/javascript">
-    $( "#target" ).submit(function() {
-        
-        if($('#nom').val()==""){
-            $('#warning').html('<p class="alert alert-danger" > Un champ n\'est pas rempli</p>');
-        }
+
+    $("input").each(function(){
+        $( "#target" ).submit(function() {
+            
+            if($(this).val()==""){
+                $('#warning').html('<p class="alert alert-danger" > Un champ n\'est pas rempli</p>');
+                
+            }
+
+        });
     });
 
 <?php echo '</script'; ?>

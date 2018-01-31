@@ -60,11 +60,16 @@
 
 <script src="vendor/jquery/jquery.js"> </script>
 <script type="text/javascript">
-    $( "#target" ).submit(function() {
-        
-        if($('#nom').val()==""){
-            $('#warning').html('<p class="alert alert-danger" > Un champ n\'est pas rempli</p>');
-        }
+
+    $("input").each(function(){
+        $( "#target" ).submit(function() {
+            
+            if($(this).val()==""){
+                $('#warning').html('<p class="alert alert-danger" > Un champ n\'est pas rempli</p>');
+                
+            }
+
+        });
     });
 
 </script>
