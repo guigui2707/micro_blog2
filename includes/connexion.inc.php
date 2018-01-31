@@ -1,6 +1,6 @@
 <?php
 	/*CONNEXION A LA BASE DE DONNEES*/
-	$pdo= new PDO('mysql:host=localhost;dbname=micro_blog_caroux','root','');
+	$pdo= new PDO('mysql:host=localhost;dbname=micro_blog','root','');
 
 	//On crée le sid de l'utilisateur en fonction de son cookie 
 	if(isset($_COOKIE['cookieUtilisateur']))

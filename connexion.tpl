@@ -35,7 +35,7 @@
         <div style="text-align: center;background-color: #DCDCDC; padding-left: 50px;padding-right: 50px" class="col-sm-6">
 
             <h1>Créer un compte </h1>
-            <form action="inscription.php" method="post">
+            <form id="target" action="inscription.php" method="post">
                 <!-- nom -->
                 <p id="nom">Nom</p>
                 <input type="name" id="nom" class="form-control" name="nomI" placeholder="Nom">
@@ -47,12 +47,28 @@
                 <!-- Mot de passe -->       
                 <p id="password">Mot de passe</p>
                 <input type="password" id="mdp" class="form-control" name="mdpI" placeholder="Mot de passe">
-                </br>                              
+                </br>   
+                <div id="warning"></div>
+                </br>                           
                 <!-- Bouton -->
                 <button class="btn btn-success" type="submit"> Inscription </button>
             </form>
+
         </div>
+        
     </div>
+
+<script src="vendor/jquery/jquery.js"> </script>
+<script type="text/javascript">
+    $( "#target" ).submit(function() {
+        
+        if($('#nom').val()==""){
+            $('#warning').html('<p class="alert alert-danger" > Un champ n\'est pas rempli</p>');
+        }
+    });
+
+</script>
+
 
     <!-- AFFICHAGE DES ERREURS DE SAISIE-->
     {if isset($erreur)}
@@ -67,12 +83,6 @@
     {/if}
     {/if}
 
-    {if isset($vide)}
-    {if $vide} 
-        <script type="text/javascript"> 
-            alert("Un champ n'est pas rempli") 
-        </script>
-    {/if}
-    {/if}
+    
     
 {include file='includes/bas.tpl'}
