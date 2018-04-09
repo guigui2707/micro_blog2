@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-13 19:09:46
-  from "C:\wamp64\www\micro_blog\includes\bas.tpl" */
+/* Smarty version 3.1.30, created on 2018-04-09 16:30:31
+  from "C:\wamp64\www\tamere2\includes\bas.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5a597a297253_22460636',
+  'unifunc' => 'content_5acb9527d0d265_07434325',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8980c287529731bf00aec5204d8a601b33119b02' => 
+    'bdc5719cfa7ebd498919f6dbea6879a4f1df8fdb' => 
     array (
-      0 => 'C:\\wamp64\\www\\micro_blog\\includes\\bas.tpl',
-      1 => 1515870200,
+      0 => 'C:\\wamp64\\www\\tamere2\\includes\\bas.tpl',
+      1 => 1523202379,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5a597a297253_22460636 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5acb9527d0d265_07434325 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 </div>
@@ -37,7 +37,13 @@ function content_5a5a597a297253_22460636 (Smarty_Internal_Template $_smarty_tpl)
                             <br>Beverly Hills, CA 90210</p>
                     </div>
                     <div class="footer-col col-md-4">
-                        
+                        <a class="sprite firestorm" href="http://www.firestorm.com" target="_blank" ></a>
+                        <a class="sprite facebook" href="http://www.facebook.com" target="_blank" ></a>
+                        <a class="sprite twitter" href="http://www.twitter.com" target="_blank" ></a>
+                        <a class="sprite linkedin" href="http://www.linkedin.com" target="_blank" ></a>
+                        <a class="sprite youtube" href="http://www.youtube.com" target="_blank" ></a>
+                        <a class="sprite google" href="http://www.plus.google.com" target="_blank" ></a>
+                    
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>A propos</h3>
@@ -64,14 +70,10 @@ function content_5a5a597a297253_22460636 (Smarty_Internal_Template $_smarty_tpl)
         </a>
     </div>
 
-    <!-- jQuery -->
-    <?php echo '<script'; ?>
- src="vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
->
 
     <!-- Bootstrap Core JavaScript -->
     <?php echo '<script'; ?>
- src="vendor/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"><?php echo '</script'; ?>
 >
 
     <!-- Plugin JavaScript -->
@@ -83,5 +85,12 @@ function content_5a5a597a297253_22460636 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="js/freelancer.min.js"><?php echo '</script'; ?>
 >
-<?php }
+
+    <!-- Script pour les votes (AJAX) -->
+    <?php echo '<script'; ?>
+ src="js/scriptVotes.js"><?php echo '</script'; ?>
+>
+
+   
+   <?php }
 }

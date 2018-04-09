@@ -27,6 +27,10 @@
           <p>{$donnees.contenu}</p>
           <footer> Message posté le {$donnees.date} par {$donnees.nom} </footer>
           </br>
+          <button type="submit" id="{$donnees.idMessage}" display="block" class="btn btn-success buttonVote ">Je like</button> 
+           <span id="nb{$donnees.idMessage}"> {$donnees.nbVotes} like(s)</span>
+         </br> </br>
+
           <!-- Seul l'auteur du message ou l'administrateur peut modifier et supprimer le message-->
           {if $donnees.nom == $nom || $nom=="Administrateur"}
               <a href="modifier.php?idMessageModif={$donnees.idMessage}" class="btn btn-primary" >Modifier</a>

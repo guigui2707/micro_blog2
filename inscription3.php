@@ -17,17 +17,22 @@
 			$smarty->assign('erreur', true);
 		}
 
+		if($_POST['nomI']=="" || $_POST['emailI']=="" || $_POST['mdpI']=="")
+		{
+			$controle=false;
+			$smarty->assign('vide', true);
+		}
 	}
 
-	
+	/* INSCRIPTION SI LE CONTROLE EST BON*/
 	if($controle==true)
 	{
 		$sql = "INSERT INTO utilisateurs (email, mdp, nom) VALUES ('{$_POST['emailI']}', :mdp,'{$_POST['nomI']}')";
 		$prep = $pdo->prepare($sql);	
 		$prep->bindValue(':mdp', md5($_POST['mdpI']));
 		$prep->execute();
-		
+		$smarty->assign('erreur', false);
 	}
-	
+
 	$smarty->display('connexion.tpl');
 ?>

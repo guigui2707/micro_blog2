@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-17 09:49:10
-  from "C:\wamp64\www\micro_blog\index.tpl" */
+/* Smarty version 3.1.30, created on 2018-04-07 17:04:25
+  from "C:\wamp64\www\tamere2\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5f1c16e65df8_00938081',
+  'unifunc' => 'content_5ac8fa19065121_07675821',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'bc55de503e793a62fc29551a47f2e69be52cfa48' => 
+    '3592c65094707acc4e696accf8178676f296a7ff' => 
     array (
-      0 => 'C:\\wamp64\\www\\micro_blog\\index.tpl',
-      1 => 1516182452,
+      0 => 'C:\\wamp64\\www\\tamere2\\index.tpl',
+      1 => 1523120660,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5a5f1c16e65df8_00938081 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ac8fa19065121_07675821 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -62,6 +62,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['donnees']->value) {
  par <?php echo $_smarty_tpl->tpl_vars['donnees']->value['nom'];?>
  </footer>
           </br>
+          <button type="submit" id="<?php echo $_smarty_tpl->tpl_vars['donnees']->value['idMessage'];?>
+" display="block" class="btn btn-success buttonVote ">Je like</button> 
+           <span id="nb<?php echo $_smarty_tpl->tpl_vars['donnees']->value['idMessage'];?>
+"> <?php echo $_smarty_tpl->tpl_vars['donnees']->value['nbVotes'];?>
+ like(s)</span>
+         </br> </br>
+
           <!-- Seul l'auteur du message ou l'administrateur peut modifier et supprimer le message-->
           <?php if ($_smarty_tpl->tpl_vars['donnees']->value['nom'] == $_smarty_tpl->tpl_vars['nom']->value || $_smarty_tpl->tpl_vars['nom']->value == "Administrateur") {?>
               <a href="modifier.php?idMessageModif=<?php echo $_smarty_tpl->tpl_vars['donnees']->value['idMessage'];?>

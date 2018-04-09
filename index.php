@@ -25,7 +25,7 @@
     // Borne du numéro de message au début de page
     $borneDebut= ($_GET['page']*$nbMessPage)-$nbMessPage;        
     
-    $sql ="SELECT contenu, id, nom, date FROM messages NATURAL JOIN utilisateurs ORDER BY date DESC LIMIT {$borneDebut},{$nbMessPage}";
+    $sql ="SELECT contenu, id, nom,nbVotes, date FROM messages NATURAL JOIN utilisateurs ORDER BY date DESC LIMIT {$borneDebut},{$nbMessPage}";
         
     $stmt=$pdo->query($sql);
 
@@ -35,10 +35,16 @@
     while($data=$stmt->fetch())
     {
         //on recupere tout le contenu dans un tableau pour l'envoyer à la page tpl
-        $tableau[$cpt]['contenu'] = $data['contenu'];
+        $contenu=$data['contenu']; //contenu
+        //fonction pour repérer les URLs dans les messages
+       
+       $contenu= preg_replace('#(https?|ftp|ssh|mailto):\/\/[a-z0-9\/:%_+.,\#?!@&=-]+#i', '<a href="$0" target="_blank">$0</a>', $contenu);
+
         $tableau[$cpt]['idMessage'] = $data['id'];
+        $tableau[$cpt]['contenu'] = $contenu;       
         $tableau[$cpt]['nom'] = $data['nom'];
         $tableau[$cpt]['date'] = date("d/m/Y H:i:s", $data['date']);
+        $tableau[$cpt]['nbVotes'] = $data['nbVotes'];
         $cpt++; 
     }
     $smarty->assign('tableau',$tableau);

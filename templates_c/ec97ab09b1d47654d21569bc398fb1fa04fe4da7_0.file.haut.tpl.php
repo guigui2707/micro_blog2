@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-17 09:52:23
-  from "C:\wamp64\www\micro_blog\includes\haut.tpl" */
+/* Smarty version 3.1.30, created on 2018-04-09 16:30:31
+  from "C:\wamp64\www\tamere2\includes\haut.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5f1cd7e427a7_71606960',
+  'unifunc' => 'content_5acb9527a6ed60_76761525',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '162b9af5ec5dbf62ff139a58c2e1db9becc200f2' => 
+    'ec97ab09b1d47654d21569bc398fb1fa04fe4da7' => 
     array (
-      0 => 'C:\\wamp64\\www\\micro_blog\\includes\\haut.tpl',
-      1 => 1516182738,
+      0 => 'C:\\wamp64\\www\\tamere2\\includes\\haut.tpl',
+      1 => 1523202455,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5f1cd7e427a7_71606960 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5acb9527a6ed60_76761525 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,19 +35,22 @@ function content_5a5f1cd7e427a7_71606960 (Smarty_Internal_Template $_smarty_tpl)
     <title>Micro blog</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Theme CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
-    <?php echo '<script'; ?>
- type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"><?php echo '</script'; ?>
-> 
+     <link rel="stylesheet" href="css/stylepage.css" />
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-
+    <!-- IMPOSSIBLE A METTRE A LA FIN DU BODY -->
+    <?php echo '<script'; ?>
+ type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"><?php echo '</script'; ?>
+>
+    <!-- ======== -->
 </head>
 
     <body id="page-top" class="index">
