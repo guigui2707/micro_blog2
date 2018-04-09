@@ -43,7 +43,7 @@
 
 <!-- PAGINATION DES MESSAGES -->
 <div class="col-sm-5">  
-    <div style="font-size: 18px" class="pagination">
+    <div  class="pagination">
 
       <!-- Affichage du bouton précédent -->
       {if $smarty.get.page != 1}

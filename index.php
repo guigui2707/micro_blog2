@@ -36,10 +36,11 @@
     {
         //on recupere tout le contenu dans un tableau pour l'envoyer à la page tpl
         $contenu=$data['contenu']; //contenu
-        //fonction pour repérer les URLs dans les messages
-       
-       $contenu= preg_replace('#(https?|ftp|ssh|mailto):\/\/[a-z0-9\/:%_+.,\#?!@&=-]+#i', '<a href="$0" target="_blank">$0</a>', $contenu);
-
+        //fonction pour repérer les URLs et mail dans les messages
+        $regExp = array('#(https?|ftp|ssh|mailto):\/\/[a-z0-9\/:%_+.,\#?!@&=-]+#i','/[0-9a-z-_.]+\@[0-9a-z.]+\.[a-z]+/');
+        $matches= array('<a href="$0" target="_blank">$0</a>','<a href="mailto:$0">$0</a>');
+        $contenu = preg_replace($regExp, $matches, $contenu);
+        
         $tableau[$cpt]['idMessage'] = $data['id'];
         $tableau[$cpt]['contenu'] = $contenu;       
         $tableau[$cpt]['nom'] = $data['nom'];

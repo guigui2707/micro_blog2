@@ -2,11 +2,11 @@
 
 
 {if ({$nbResultat}==0)} 
-    <h2 style="text-align:center"> Nous avons trouvé aucun résultat à votre recherche</h2>
+    <h2 class="searchH2"> Nous avons trouvé aucun résultat à votre recherche</h2>
 {else if ({$nbResultat}==1)}
-  <h1 style="text-align:center"> Nous avons trouvé {$nbResultat} résultat à votre recherche : </h1>
+  <h1 class="searchH2" > Nous avons trouvé {$nbResultat} résultat à votre recherche : </h1>
 {else}
-  <h1 style="text-align:center"> Nous avons trouvé {$nbResultat} résultats à votre recherche : </h1>
+  <h1 class="searchH2"> Nous avons trouvé {$nbResultat} résultats à votre recherche : </h1>
 {/if}
 
 <!-- Affichage du contenu des messages -->
@@ -26,7 +26,7 @@
 {/foreach}
 
   <!-- Redirection vers l'accueil -->
-  <a style="margin-top: 30px" id="connexion" class="btn btn-success" href="index.php">Retour à l'accueil</a>
+  <a id="connexion" class="btn btn-success redirectionA" href="index.php">Retour à l'accueil</a>
   
 
 

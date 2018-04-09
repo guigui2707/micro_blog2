@@ -16,15 +16,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Theme CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
-     <link rel="stylesheet" href="css/stylepage.css" />
+     
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- IMPOSSIBLE A METTRE A LA FIN DU BODY -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
-    <!-- ======== -->
+
 </head>
 
     <body id="page-top" class="index">
@@ -61,7 +59,7 @@
                         <li><div class="col-sm-1"></div></li>
                         <li>
                             <!-- Formulaire de recherche -->
-                            <form style="margin-top: 3%" action="recherche.php" method="GET">
+                            <form id="searchForm" action="recherche.php" method="GET">
                                 <input type="text" placeholder="Rechercher" name="search" class="form-control">
                             </form>
                         </li>                        

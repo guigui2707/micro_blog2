@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-07 16:14:12
+/* Smarty version 3.1.30, created on 2018-04-09 17:46:57
   from "C:\wamp64\www\tamere2\connexion.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5ac8ee546f95f5_50492722',
+  'unifunc' => 'content_5acba7111bd300_50254323',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '17d5b145ed89f93f7ce04ecfa06c2b134ae48b9e' => 
     array (
       0 => 'C:\\wamp64\\www\\tamere2\\connexion.tpl',
-      1 => 1523117651,
+      1 => 1523296013,
       2 => 'file',
     ),
   ),
@@ -22,15 +22,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5ac8ee546f95f5_50492722 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5acba7111bd300_50254323 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
    
+    <?php echo '<script'; ?>
+ type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"><?php echo '</script'; ?>
+>
      <?php echo '<script'; ?>
  type="text/javascript" src="js/scriptRegExp.js"><?php echo '</script'; ?>
 >
-
+   
     <!-- Formulaire de connexion -->
     <div class="row">
         <div class="col-sm-3""></div>
@@ -108,11 +111,17 @@ $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_i
     <?php if ($_smarty_tpl->tpl_vars['erreur']->value) {?> 
         <?php echo '<script'; ?>
  type="text/javascript"> 
-            alert("Nom ou email déjà utilisé ! Veuillez réessayer") ;
+            alert("Nom ou email déjà utilisé ! Veuillez réessayer");
+            
         <?php echo '</script'; ?>
 >
 <?php }
 }?>
+
+
+
+
+
 
     
 <?php $_smarty_tpl->_subTemplateRender("file:includes/bas.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

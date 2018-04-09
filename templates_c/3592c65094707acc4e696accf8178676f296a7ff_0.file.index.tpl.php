@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-07 17:04:25
+/* Smarty version 3.1.30, created on 2018-04-09 17:58:28
   from "C:\wamp64\www\tamere2\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5ac8fa19065121_07675821',
+  'unifunc' => 'content_5acba9c4169492_52689979',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3592c65094707acc4e696accf8178676f296a7ff' => 
     array (
       0 => 'C:\\wamp64\\www\\tamere2\\index.tpl',
-      1 => 1523120660,
+      1 => 1523296685,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5ac8fa19065121_07675821 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5acba9c4169492_52689979 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -88,7 +88,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 
 <!-- PAGINATION DES MESSAGES -->
 <div class="col-sm-5">  
-    <div style="font-size: 18px" class="pagination">
+    <div  class="pagination">
 
       <!-- Affichage du bouton précédent -->
       <?php if ($_GET['page'] != 1) {?>

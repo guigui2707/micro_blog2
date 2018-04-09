@@ -1,7 +1,8 @@
 {include file='includes/haut.tpl'}
    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
      <script type="text/javascript" src="js/scriptRegExp.js"></script>
-
+   
     <!-- Formulaire de connexion -->
     <div class="row">
         <div class="col-sm-3""></div>
@@ -78,10 +79,16 @@
 {if isset($erreur)}
     {if $erreur} 
         <script type="text/javascript"> 
-            alert({$erreur}) ;
+            alert("Nom ou email déjà utilisé ! Veuillez réessayer");
+            
         </script>
 {/if}
 {/if}
+
+
+
+
+
 
     
 {include file='includes/bas.tpl'}
