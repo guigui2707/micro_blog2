@@ -34,24 +34,39 @@
     $tableau=array(); //declaration d'un tableau
     while($data=$stmt->fetch())
     {
+
         //on recupere tout le contenu dans un tableau pour l'envoyer à la page tpl
         $contenu=$data['contenu']; //contenu
+        
+        //fonction lire la suite pour les mess longs
+        if (strlen($contenu) > 100) 
+        {
+            $contenu =substr($contenu, 0, 100);
+            $afficherButton=true;
+
+        }
+        else
+        {
+            $afficherButton=false;
+        }
+
         //fonction pour repérer les URLs et mail dans les messages
         $regExp = array('#(https?|ftp|ssh|mailto):\/\/[a-z0-9\/:%_+.,\#?!@&=-]+#i','/[0-9a-z-_.]+\@[0-9a-z.]+\.[a-z]+/');
         $matches= array('<a href="$0" target="_blank">$0</a>','<a href="mailto:$0">$0</a>');
         $contenu = preg_replace($regExp, $matches, $contenu);
-        
+
+  
+   
         $tableau[$cpt]['idMessage'] = $data['id'];
-        $tableau[$cpt]['contenu'] = $contenu;       
+        $tableau[$cpt]['contenu'] = $contenu; 
+        $tableau[$cpt]['afficherButton'] = $afficherButton;       
         $tableau[$cpt]['nom'] = $data['nom'];
         $tableau[$cpt]['date'] = date("d/m/Y H:i:s", $data['date']);
         $tableau[$cpt]['nbVotes'] = $data['nbVotes'];
         $cpt++; 
     }
     $smarty->assign('tableau',$tableau);
-    $smarty->assign('nom',$nom);
-
-           
+    $smarty->assign('nom',$nom);  
     $smarty->display('index.tpl'); //code html
 
 ?>

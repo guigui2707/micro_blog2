@@ -22,3 +22,7 @@ background-color: #DCDCDC;
 .pagination{
 	font-size: 18px;
 }
+
+.buttonLireLaSuite{
+	cursor:pointer;
+}

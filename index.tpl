@@ -24,10 +24,16 @@
 {foreach from=$tableau item=donnees}
       <!-- Contenu et affichage du message -->
       <blockquote>
-          <p>{$donnees.contenu}</p>
+          <p id="divARemplir{$donnees.idMessage}">{$donnees.contenu}</p>
+          
+          {if $donnees.afficherButton}
+            <a id="{$donnees.idMessage}" class="buttonLireLaSuite">Lire la suite </a>
+          {/if}
+        
+          
           <footer> Message posté le {$donnees.date} par {$donnees.nom} </footer>
           </br>
-          <button type="submit" id="{$donnees.idMessage}" display="block" class="btn btn-success buttonVote ">Je like</button> 
+          <button type="submit" id="{$donnees.idMessage}" class="btn btn-success buttonVote ">Je like</button> 
            <span id="nb{$donnees.idMessage}"> {$donnees.nbVotes} like(s)</span>
          </br> </br>
 

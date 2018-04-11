@@ -60,5 +60,9 @@
     <!-- Script pour les votes (AJAX) -->
     <script src="js/scriptVotes.js"></script>
 
-   
+     <!-- Script pour le bouton Lire la suite (AJAX) -->
+    <script src="js/scriptLireLaSuite.js"></script>
+    
+
+
    

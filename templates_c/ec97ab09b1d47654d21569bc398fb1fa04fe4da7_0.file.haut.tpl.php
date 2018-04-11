@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-09 18:01:57
+/* Smarty version 3.1.30, created on 2018-04-10 16:39:29
   from "C:\wamp64\www\tamere2\includes\haut.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5acbaa9526aef3_09133375',
+  'unifunc' => 'content_5acce8c15360a1_56240847',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec97ab09b1d47654d21569bc398fb1fa04fe4da7' => 
     array (
       0 => 'C:\\wamp64\\www\\tamere2\\includes\\haut.tpl',
-      1 => 1523296912,
+      1 => 1523378326,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5acbaa9526aef3_09133375 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5acce8c15360a1_56240847 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -45,6 +45,10 @@ function content_5acbaa9526aef3_09133375 (Smarty_Internal_Template $_smarty_tpl)
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- IMPOSSIBLE A METTRE EN BAS DE PAGE pour les votes-->
+    <?php echo '<script'; ?>
+ type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"><?php echo '</script'; ?>
+>
 
 
 </head>

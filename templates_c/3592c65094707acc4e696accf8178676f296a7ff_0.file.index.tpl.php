@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-09 17:58:28
+/* Smarty version 3.1.30, created on 2018-04-10 20:12:11
   from "C:\wamp64\www\tamere2\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5acba9c4169492_52689979',
+  'unifunc' => 'content_5acd1a9b7f4f35_77827926',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3592c65094707acc4e696accf8178676f296a7ff' => 
     array (
       0 => 'C:\\wamp64\\www\\tamere2\\index.tpl',
-      1 => 1523296685,
+      1 => 1523391118,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5acba9c4169492_52689979 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5acd1a9b7f4f35_77827926 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -56,14 +56,22 @@ foreach ($_from as $_smarty_tpl->tpl_vars['donnees']->value) {
 ?>
       <!-- Contenu et affichage du message -->
       <blockquote>
-          <p><?php echo $_smarty_tpl->tpl_vars['donnees']->value['contenu'];?>
+          <p id="divARemplir<?php echo $_smarty_tpl->tpl_vars['donnees']->value['idMessage'];?>
+"><?php echo $_smarty_tpl->tpl_vars['donnees']->value['contenu'];?>
 </p>
+          
+          <?php if ($_smarty_tpl->tpl_vars['donnees']->value['afficherButton']) {?>
+            <a id="<?php echo $_smarty_tpl->tpl_vars['donnees']->value['idMessage'];?>
+" class="buttonLireLaSuite">Lire la suite </a>
+          <?php }?>
+        
+          
           <footer> Message posté le <?php echo $_smarty_tpl->tpl_vars['donnees']->value['date'];?>
  par <?php echo $_smarty_tpl->tpl_vars['donnees']->value['nom'];?>
  </footer>
           </br>
           <button type="submit" id="<?php echo $_smarty_tpl->tpl_vars['donnees']->value['idMessage'];?>
-" display="block" class="btn btn-success buttonVote ">Je like</button> 
+" class="btn btn-success buttonVote ">Je like</button> 
            <span id="nb<?php echo $_smarty_tpl->tpl_vars['donnees']->value['idMessage'];?>
 "> <?php echo $_smarty_tpl->tpl_vars['donnees']->value['nbVotes'];?>
  like(s)</span>

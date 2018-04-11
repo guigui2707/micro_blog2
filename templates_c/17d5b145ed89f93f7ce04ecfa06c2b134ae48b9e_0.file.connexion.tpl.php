@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-09 17:46:57
+/* Smarty version 3.1.30, created on 2018-04-10 16:40:24
   from "C:\wamp64\www\tamere2\connexion.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5acba7111bd300_50254323',
+  'unifunc' => 'content_5acce8f88a16b5_50250332',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '17d5b145ed89f93f7ce04ecfa06c2b134ae48b9e' => 
     array (
       0 => 'C:\\wamp64\\www\\tamere2\\connexion.tpl',
-      1 => 1523296013,
+      1 => 1523378289,
       2 => 'file',
     ),
   ),
@@ -22,14 +22,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5acba7111bd300_50254323 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5acce8f88a16b5_50250332 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
    
-    <?php echo '<script'; ?>
- type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"><?php echo '</script'; ?>
->
+    
      <?php echo '<script'; ?>
  type="text/javascript" src="js/scriptRegExp.js"><?php echo '</script'; ?>
 >

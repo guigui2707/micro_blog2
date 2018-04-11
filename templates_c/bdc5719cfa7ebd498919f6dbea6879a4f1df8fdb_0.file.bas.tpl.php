@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-09 17:52:18
+/* Smarty version 3.1.30, created on 2018-04-10 17:45:39
   from "C:\wamp64\www\tamere2\includes\bas.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5acba85278ef63_41220658',
+  'unifunc' => 'content_5accf8430e38e1_68087440',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bdc5719cfa7ebd498919f6dbea6879a4f1df8fdb' => 
     array (
       0 => 'C:\\wamp64\\www\\tamere2\\includes\\bas.tpl',
-      1 => 1523296103,
+      1 => 1523380421,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5acba85278ef63_41220658 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5accf8430e38e1_68087440 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 </div>
@@ -92,6 +92,12 @@ function content_5acba85278ef63_41220658 (Smarty_Internal_Template $_smarty_tpl)
  src="js/scriptVotes.js"><?php echo '</script'; ?>
 >
 
-   
+     <!-- Script pour le bouton Lire la suite (AJAX) -->
+    <?php echo '<script'; ?>
+ src="js/scriptLireLaSuite.js"><?php echo '</script'; ?>
+>
+    
+
+
    <?php }
 }
