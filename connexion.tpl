@@ -62,7 +62,7 @@
                 <input required = "emailI" type="mail" class="emailI" name="emailI" placeholder="nom@domaine.com" id="emailI" required /><br><br>
                 <p class ="controle" id = "erreurmail"> </p>
 
-                <p id="mdp">Mot de Passe </br> (1minuscule,1 majuscule, 1 caractère spécial et 5 caracteres minimum)</p>
+                <p id="mdp">Mot de Passe </br> (1minuscule,1 majuscule, 1 caractère spécial et 8 caracteres minimum)</p>
                 <input required = "mdpI" class="mdpI" name="mdpI" type="password" placeholder="mdp" id="mdpI"  />
                 <p class ="controle" id = "erreurmdp"> </p>
 
