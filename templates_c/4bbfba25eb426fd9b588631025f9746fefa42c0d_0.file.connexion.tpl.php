@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-11 15:49:30
-  from "C:\wamp64\www\tamere2\connexion.tpl" */
+/* Smarty version 3.1.30, created on 2018-04-11 16:30:41
+  from "C:\wamp64\www\micro_blog\connexion.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5ace2e8ae87555_39707053',
+  'unifunc' => 'content_5ace383191fca5_62147126',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '17d5b145ed89f93f7ce04ecfa06c2b134ae48b9e' => 
+    '4bbfba25eb426fd9b588631025f9746fefa42c0d' => 
     array (
-      0 => 'C:\\wamp64\\www\\tamere2\\connexion.tpl',
+      0 => 'C:\\wamp64\\www\\micro_blog\\connexion.tpl',
       1 => 1523461625,
       2 => 'file',
     ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5ace2e8ae87555_39707053 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ace383191fca5_62147126 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

@@ -58,7 +58,7 @@
     <script src="js/freelancer.min.js"></script>
 
     <!-- Script pour les votes (AJAX) -->
-    <script src="js/scriptVotes.js"></script>
+    <script src="js/scriptVotes.min.js"></script>
 
      <!-- Script pour le bouton Lire la suite (AJAX) -->
     <script src="js/scriptLireLaSuite.min.js"></script>

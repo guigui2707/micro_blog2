@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-11 15:49:23
-  from "C:\wamp64\www\tamere2\includes\bas.tpl" */
+/* Smarty version 3.1.30, created on 2018-04-11 16:30:32
+  from "C:\wamp64\www\micro_blog\includes\bas.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5ace2e83b9f8a3_31368809',
+  'unifunc' => 'content_5ace38286f30f3_87079745',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'bdc5719cfa7ebd498919f6dbea6879a4f1df8fdb' => 
+    '8980c287529731bf00aec5204d8a601b33119b02' => 
     array (
-      0 => 'C:\\wamp64\\www\\tamere2\\includes\\bas.tpl',
+      0 => 'C:\\wamp64\\www\\micro_blog\\includes\\bas.tpl',
       1 => 1523461753,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ace2e83b9f8a3_31368809 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ace38286f30f3_87079745 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 </div>
