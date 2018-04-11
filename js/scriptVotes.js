@@ -1,4 +1,4 @@
-
+//COPYRIGHT GUILLAUME CAROUX 
     $(function(){
   
     $('.buttonVote').click(function(){

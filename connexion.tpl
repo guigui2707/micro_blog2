@@ -1,7 +1,7 @@
 {include file='includes/haut.tpl'}
    
     
-     <script type="text/javascript" src="js/scriptRegExp.js"></script>
+     
    
     <!-- Formulaire de connexion -->
     <div class="row">
@@ -26,6 +26,7 @@
                 <p class ="controle" id = "connexionsuccess"> </p>
                 <p>Pas de compte ? Créer en un ci dessous !</p>
                 <!-- Bouton -->
+                
                 <button class="btn btn-success" type="submit">Connexion</button>
                 
 
@@ -76,14 +77,7 @@
          </div>
 </div>
 
-{if isset($erreur)}
-    {if $erreur} 
-        <script type="text/javascript"> 
-            alert("Nom ou email déjà utilisé ! Veuillez réessayer");
-            
-        </script>
-{/if}
-{/if}
+
 
 
 

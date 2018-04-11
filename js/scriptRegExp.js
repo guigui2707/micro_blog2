@@ -1,5 +1,7 @@
 
  $(document).ready(function() {
+	//copyright GUILLAUME CAROUX
+
 	$("#formulaireInscription").submit(function() {
 
 		var controle = false ;
@@ -58,12 +60,7 @@
 			$("#authentification").html("<p class='alert alert-success'>Compte créé avec succès ! </br> Vous pouvez vous authentifier</p>") ;
 		}
 
-		var pb=' <?PHP echo $probleme; ?>';
-		if(pb==true)
-		{
-			$("#authentification").html("<p class='alert alert-danger'>Nom ou e-mail déjà utilisé </br> Veuillez réessayer</p>") ;
-			controle=true;
-		}
+		
 
 		//s'il y a une erreur ne pas donner suite 
 		if (controle == true) return false ;
@@ -155,6 +152,13 @@
 		if(controleCo==false)
 		{
 			$("#connexionsuccess").html("<p class='alert alert-success'>Vous êtes maintenant connecté</p>") ;
+		}
+
+		var pb=' <?PHP echo $erreur; ?>';
+		if(pb==true)
+		{
+			$("#connexionsuccess").html("<p class='alert alert-danger'>Nom ou e-mail déjà utilisé </br> Veuillez réessayer</p>") ;
+			controle=true;
 		}
 
 

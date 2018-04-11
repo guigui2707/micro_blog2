@@ -4,8 +4,8 @@
     $('.buttonLireLaSuite').click(function(){
       var idCpt=this.id;
       $.ajax({
-         url : 'lireLaSuite.php', // La ressource ciblée
-         type : 'GET', // Le type de la requête HTTP
+         url : 'lireLaSuite.php', 
+         type : 'GET', 
          data:{id:this.id},
          dataType: 'html',
           success : function(data)

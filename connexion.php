@@ -17,6 +17,7 @@
     //Si retour d'un resultat on authentifie l'utilisateur
     if(isset($resultat))
     {
+        
         //création du sid et du cookie de session 
         $sid=md5($_POST['emailCo'].time());
         setcookie("cookieUtilisateur", $sid, time()+300);
@@ -29,6 +30,7 @@
         $prep->execute();
         header('Location:index.php');
     }
+
 
 $smarty->display('connexion.tpl');
 ?>
