@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-11 16:30:41
+/* Smarty version 3.1.30, created on 2018-04-11 16:39:13
   from "C:\wamp64\www\micro_blog\connexion.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5ace383191fca5_62147126',
+  'unifunc' => 'content_5ace3a31a807c7_32897457',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4bbfba25eb426fd9b588631025f9746fefa42c0d' => 
     array (
       0 => 'C:\\wamp64\\www\\micro_blog\\connexion.tpl',
-      1 => 1523461625,
+      1 => 1523464731,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:includes/bas.tpl' => 1,
   ),
 ),false)) {
-function content_5ace383191fca5_62147126 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ace3a31a807c7_32897457 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -89,7 +89,7 @@ $_smarty_tpl->_subTemplateRender("file:includes/haut.tpl", $_smarty_tpl->cache_i
                 <input required = "emailI" type="mail" class="emailI" name="emailI" placeholder="nom@domaine.com" id="emailI" required /><br><br>
                 <p class ="controle" id = "erreurmail"> </p>
 
-                <p id="mdp">Mot de Passe </br> (1minuscule,1 majuscule, 1 caractère spécial et 5 caracteres minimum)</p>
+                <p id="mdp">Mot de Passe </br> (1minuscule,1 majuscule, 1 caractère spécial et 8 caracteres minimum)</p>
                 <input required = "mdpI" class="mdpI" name="mdpI" type="password" placeholder="mdp" id="mdpI"  />
                 <p class ="controle" id = "erreurmdp"> </p>
 
